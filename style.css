@@ -121,11 +121,12 @@ a{
     top: -50px;
     left: 120px;
 }
-button{
+.homebutton button{
     background-color:#26DFB1;
-    width: 165px;
-    height: 48px;
+    width: 120px;
+    height: 38px;
     border-radius: 43px;
+    color: white;
 }
 .about{
      width: 100%;
@@ -282,6 +283,7 @@ button{
     display: flex;
     flex-direction: row;
     gap: 100px;
+    padding-left: 25px;
 }
 .ins{
     display: flex;
@@ -400,10 +402,14 @@ button{
     width: 398px;
     height: 521px;
 }
-.registerpage{
-    padding-top: 20px;
+body .registerpage{
+    padding-top:  70px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
    
    
     
@@ -492,6 +498,12 @@ button{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
+#hoome{
+    padding-right: 100px;
+     background: linear-gradient(to top, #FFCC00 50%,#0088FF 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 
 .blog{
@@ -509,6 +521,8 @@ button{
 .container{
      width: 100%;
     height: 1459px;
+    display: flex;
+    flex-direction: row;
 }
 .blopic{
     display: flex;
@@ -524,14 +538,21 @@ button{
 }
 
 .categ{
-    padding-right: 160px;
+    padding-right: 50px;
     width: 500px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 .why{
     /* height: 195px; */
     padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 footer{
     padding-right: 500px;
@@ -689,9 +710,10 @@ footer{
     height: 59px;
 }
 #homee{
-      background: linear-gradient(to top, #FFCC00 50%,#0088FF 50%);
+      background: linear-gradient(to top, #FFCC00 50%,#0088FF 20%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-left: 250px;
 }
 .back{
     display: flex;
@@ -702,18 +724,70 @@ footer{
     width: 36px;
     height: 29.17px;
 }
-.webicon{
+.me .webicon{
     padding-top: 30px;
     padding-bottom: 50px;
     display: flex;
     flex-direction: row;
-    gap: 66px;
+    gap: 36px;
+    width: fit-content;
+    align-self: flex-start;
+}
+.webicon img{
+    width: 31.78px;
+    height: 32.36px;
 }
 .homebutton{
    display: flex; 
    flex-direction: row;
-   gap: 25px;
+   gap: 60px;
+   
 }
+.words button{
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #03DDF9;
+    color: white;
+    
+}
+.web #read{
+    background-color: #03DDF9;
+    border-radius: 25px;
+}
+.projectpic button{
+    width: 200px;
+    height: 40px;
+    background-color: #03DDF9;
+    border-radius: 25px;
+}
+#send{
+    width: 200px;
+    height: 40px;
+    background-color: #03DDF9;
+    border-radius: 25px; 
+}
+#logBut{
+    border-radius: 25px; 
+}
+#regibut{
+    border-radius: 55px; 
+}
+
+.categ button{
+   width: 140px;
+    height: 40px;
+    background-color: #03DDF9;
+    border-radius: 25px; 
+    
+}
+.why button{
+   width: 200px;
+    height: 40px;
+    background-color: #03DDF9;
+    border-radius: 25px; 
+}
+
 .airs {
     position: absolute;
     width: 100%;
@@ -822,7 +896,7 @@ footer{
     display: flex;
     align-items: center;
 
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
 
     white-space: nowrap;
@@ -830,9 +904,13 @@ footer{
 
 .cursor {
     margin-left: 3px;
-    animation: blink 0.7s infinite;
+    animation: blink 7s infinite;
 }
-
+.webicon img:hover{
+    opacity: 0.58;
+    box-shadow: #0088FF 0 0 12px;
+    transform: translateY(0.4px) scale(1);
+}
 @keyframes blink {
     50% {
         opacity: 0;
@@ -997,6 +1075,7 @@ footer{
 }
 #imgs{
      position: relative; 
+     color: none;
 }
 #imgs .imgs1{
     position: relative;
@@ -1013,3 +1092,456 @@ footer{
 
 
 }
+
+.mask h3{
+    color: #0E5310;
+     font-family: "Holtwood One SC", serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+.mask #imgs:hover{
+    opacity: 0.58;
+
+}
+.ema{
+    display: flex;
+    flex-direction: column;
+}
+.ema .w{
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+}
+.ema .w input{
+    width: 350px;
+}
+
+.registerpage {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.regis {
+    width: 926px;
+    height: 507px;
+    background-color: #230404;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.regi {
+    width: 528px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mynames {
+    width: 375px;
+    display: flex;
+    flex-direction: row;
+    gap: 33px;
+    padding-left: 25px;
+}
+
+.mynames .w {
+    width: 171px;
+}
+
+.mynames input {
+    width: 171px;
+}
+
+.ema {
+    display: flex;
+    flex-direction: column;
+}
+
+.ema .w {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-top: 20px;
+}
+
+.ema .w input {
+    width: 375px;
+    height: 30px;
+}
+
+.password-box {
+    position: relative;
+    width: 405px;
+}
+
+.password-box input {
+    width: 405px;
+    height: 30px;
+    padding-right: 45px;
+}
+
+.password-box button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    padding-right: 40px;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.password-box button:hover {
+    background: transparent;
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+.password-box button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+#hyee {
+    padding-top: 20px;
+    padding-left: 24px;
+}
+
+#hyee #regibut {
+    width: 373px;
+    height: 42px;
+    background-image: linear-gradient(to bottom right, #469C0C 20%, #46066C 60%);
+}
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 373px;
+    padding-top: 20px;
+}
+
+.or-divider span {
+    height: 1px;
+    display: flex;
+    background: white;
+    flex: 1;
+}
+
+.or-divider p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+#iner {
+    width: 185px;
+    height: 21px;
+    background: none;
+    border: white 1px solid;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#iner img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.login-email,
+.login-password {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login-email input,
+.login-password-box input {
+    width: 230px;
+    height: 30px;
+}
+
+.login-password-box {
+    position: relative;
+    width: 350px;
+}
+
+.login-password-box input {
+    padding-right: 45px;
+}
+
+.login-password-box button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    padding-right: 130px;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.login-password-box button:hover {
+    background: transparent;
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+.login-password-box button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+#forgotPassword {
+    padding: 0;
+    font-size: medium;
+}
+.middle a{
+    display: inline-block;
+}
+.middle a:hover{
+    opacity: 1;
+    text-shadow: #000000 0 0 15px;
+}
+.middle a:active{
+    opacity: 0.55;
+    border: 2px solid #20E1DB;
+}
+.reg a:hover{
+    opacity: 1;
+    text-shadow: #000000 0 0 15px;
+}
+.reg a:active{
+    opacity: 0.55;
+    border: 2px solid #20E1DB;
+}
+
+.me button:hover{
+    opacity: 0.55;
+    box-shadow: #000000 0 0 15px;
+}
+.me #down:hover{
+    opacity: 0.55;
+    box-shadow: #000000 0 0 15px;
+    color:#20E1DB ;
+    background-image: url(./downcv.png);
+}
+.me button:active{
+    opacity: 0.55;
+    border: 2px solid #20E1DB;
+}
+.words button{
+    color: white;
+}
+.words button:hover{
+    opacity: 0.55;
+    box-shadow: #000000 2 0 15px;
+    color:white ;
+}
+.back img:hover{
+    opacity: 0.55;
+    box-shadow: #000000 2 0 15px;
+    color:white ;
+}
+.back img:active{
+    opacity: 0.55;
+    border: 2px solid #20E1DB;
+}
+.projectpic button{
+    color: white;
+}
+.projectpic button:hover{
+    opacity: 0.55;
+    box-shadow: #000000 2 0 15px;
+    color:white ;
+}
+.projectpic button:active{
+    opacity: 0.55;
+    border: 2px solid #20E1DB;
+}
+.blog button{
+    color: white;
+}
+.blog button:hover{
+    opacity: 0.55;
+    box-shadow: #000000 2 0 15px;
+    color:white ;
+}
+.blog button:active{
+    opacity: 0.55;
+    border: 2px solid #20E1DB;
+}
+
+#contactForm{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message{
+    width: 1097px;
+    height: 78px;
+    background-color: #261F1F;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 15px;
+    resize: none;
+    font-size: 16px;
+}
+
+.message::placeholder{
+    color: #999;
+}
+
+#send{
+    width: 148px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#send:hover{
+    opacity: 0.55;
+    box-shadow: #000000 0 0 15px;
+}
+
+#send:active{
+    opacity: 0.55;
+    border: 2px solid #20E1DB;
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 12px;
+    left: 15px;
+    z-index: 2002;
+    width: 45px;
+    height: 40px;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    background: #110C0C;
+    border: 1px solid #20E1DB;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #20E1DB;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menubar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3001;
+    width: min(300px, 80vw);
+    height: 100vh;
+    padding: 80px 25px 30px;
+    background: #110C0C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.35s ease, visibility 0.35s;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.menubar a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+body.menu-open .menubar {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s;
+}
+
+body.menu-open .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.menu-open .menu-toggle span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+body.menu-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+body.menu-open .menu-toggle span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+@media (min-width: 1000px) {
+    .menu-toggle {
+        top: 15px;
+        left: 90px;
+    }
+}
+

@@ -3,34 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Login</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body style="background-color: #2e0707;">
+
     <div class="loginpage">
-    <div class="login">
-        <div class="logi">
-           <h4  id="homeee"><a href="index.html">Home</a></h4>
-           
-<h5 id="hy">Login</h5>
-<h5>Email<hr></h5>
-<div id="pass">
-<h5 >Password<hr></h5>
-<h5>Forgot password?</h5>
-</div>
-<div id="hye">
-<button type="submit" id="logBut">Login</button>
-</div>
-<h5>Create account?<a href="signup.html" id="sign">Sign up</a></h5> 
+
+        <div class="login">
+
+            <div class="logi">
+
+                <h4 id="homeee">
+                      <div class="menu-overlay" id="menuOverlay"></div>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="menubar" id="mainMenu">
+        <a href="index.html" id="h">Home</a>
+        <a href="about.html" id="a">About</a>
+        <a href="Service.html" id="h">Services</a>
+        <a href="Skills.html" id="a">Skills</a>
+        <a href="project.html" id="h">Project</a>
+        <a href="blog.html" id="a">Blog</a>
+        <a href="contact.html" id="h">Contact me</a>
+    </nav>
+                    <a href="index.html">Home</a>
+                </h4>
+
+                <h5 id="hy">Login</h5>
+
+                <form id="loginForm" action="#" method="post">
+
+                    <div class="login-email">
+
+                        <label for="loginEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div id="pass">
+
+                        <div class="login-password">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                            <div class="login-password-box">
+
+                                <input
+                                    type="password"
+                                    id="loginPassword"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    id="loginTogglePassword"
+                                >
+                                    <img
+                                        src="./seepss.png"
+                                        alt="Show password"
+                                    >
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <h5>
+                            <a href="#" id="forgotPassword">
+                                Forgot password?
+                            </a>
+                        </h5>
+
+                    </div>
+
+
+                    <div id="hye">
+
+                        <button
+                            type="submit"
+                            id="logBut"
+                        >
+                            Login
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <h5>
+                    Create account?
+                    <a
+                        href="signup.html"
+                        id="sign"
+                    >
+                        Sign up
+                    </a>
+                </h5>
+
+            </div>
+
+
+            <div class="logpic">
+
+                <img
+                    id="loginpic"
+                    src="./Screenshot from 2026-09-24 12-01-17.png"
+                    alt=""
+                >
+
+            </div>
 
         </div>
-        <div class="logpic">
-            <img id="loginpic" src="./Screenshot from 2026-09-24 12-01-17.png" alt="">
-        </div>
+
     </div>
-    
-    </div>
+
+
     <script src="port.js"></script>
- 
+
 </body>
 </html>

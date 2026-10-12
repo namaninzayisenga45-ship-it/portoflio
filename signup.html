@@ -3,56 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Sign Up</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body style="background-color: rgb(54, 8, 8);">
+
     <div class="registerpage">
-    <div class="regis">
-        <div class="regi">
-    <h4 id="home"><a href="index.html">Home</a></h4> 
-              
-<div id="hya">Sign up</div>
-<div class="mynames">
-    <div class="w">
-    First name
-    <input type="text" placeholder="enter email">
 
-</div>
-<div class="w">
-Second name
-<input type="text" placeholder="enter email">
- </div>
-</div>
-<div class="ema">
-    <div class="w">
-    Email address
-    <input type="text" placeholder="enter email">
-</div>
-<div class="w">
-Password
-<input type="text" placeholder="enter email">
-</div>
-</div>
+        <div class="regis">
 
-<div id="hyee">
-<button type="submit" id="regibut">Register</button>
-</div>
-<div class="or-divider">
-    <span></span>
-    <p>or</p>
-    <span></span>
-</div>
-<div class="link">
-<div id="iner"><img src="./contfb.png" alt=""> Continue with Facebook</div> <div id="iner"><img src="./contgoo.png" alt=""> Continue with Google</div>
-</div>
+            <div class="regi">
+
+                <h4 id="home">
+                             <div class="menu-overlay" id="menuOverlay"></div>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="menubar" id="mainMenu">
+        <a href="index.html" id="h">Home</a>
+        <a href="about.html" id="a">About</a>
+        <a href="Service.html" id="h">Services</a>
+        <a href="Skills.html" id="a">Skills</a>
+        <a href="project.html" id="h">Project</a>
+        <a href="blog.html" id="a">Blog</a>
+        <a href="contact.html" id="h">Contact me</a>
+    </nav>
+                    <a href="index.html">Home</a>
+                </h4>
+
+                <div id="hya">Sign up</div>
+
+                <form id="signupForm" action="#" method="post">
+
+                    <div class="mynames">
+
+                        <div class="w">
+
+                            <label for="firstName">First name</label>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                name="firstName"
+                                placeholder="Enter first name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="w">
+
+                            <label for="secondName">Second name</label>
+
+                            <input
+                                type="text"
+                                id="secondName"
+                                name="secondName"
+                                placeholder="Enter second name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ema">
+
+                        <div class="w">
+
+                            <label for="email">Email address</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Eg. Ablahamisac@gmail.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="w">
+
+                            <label for="password">Password</label>
+
+                            <div class="password-box">
+
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    placeholder="Enter password"
+                                    minlength="8"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    id="togglePassword"
+                                >
+                                    <img
+                                        src="./seepss.png"
+                                        alt="Show password"
+                                    >
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="hyee">
+
+                        <button
+                            type="submit"
+                            id="regibut"
+                        >
+                            Register
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <div class="or-divider">
+
+                    <span></span>
+
+                    <p>or</p>
+
+                    <span></span>
+
+                </div>
+
+
+                <div class="link">
+
+                    <div id="iner">
+
+                        <img
+                            src="./contfb.png"
+                            alt=""
+                        >
+
+                        Continue with Facebook
+
+                    </div>
+
+
+                    <div id="iner">
+
+                        <img
+                            src="./contgoo.png"
+                            alt=""
+                        >
+
+                        Continue with Google
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <img
+                    src="./Pasted image.png"
+                    alt=""
+                >
+
+            </div></div>
+
         </div>
-        <div>
-            <img src="./Pasted image.png" alt="">
-        </div>
-       </div>
-    
+
     </div>
+
+
     <script src="port.js"></script>
+
 </body>
 </html>

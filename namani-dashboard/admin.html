@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namani | Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- LOGIN -->
+    <section class="login-screen" id="loginScreen">
+        <form class="login-card" id="loginForm">
+            <div class="logo">N<span>.</span></div>
+
+            <p class="eyebrow">PRIVATE ADMIN SPACE</p>
+            <h1>Welcome back</h1>
+            <p class="muted">Sign in to manage your portfolio.</p>
+
+            <label for="email">Admin Email</label>
+            <input type="email" id="email" required
+                   placeholder="Enter your email">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" required
+                   placeholder="Enter your password">
+
+            <button type="submit" class="gold-button">
+                Sign In <span>↗</span>
+            </button>
+
+            <p id="loginMessage" class="message"></p>
+        </form>
+    </section>
+
+    <!-- DASHBOARD -->
+    <div class="dashboard hidden" id="dashboard">
+
+        <aside class="sidebar" id="sidebar">
+            <a href="#" class="brand">N<span>.</span> NAMANI</a>
+            <p class="nav-label">WORKSPACE</p>
+
+            <nav>
+                <button class="nav-link active" data-page="overview">
+                    ◫ Overview
+                </button>
+                <button class="nav-link" data-page="blogs">
+                    ▤ Blogs
+                </button>
+                <button class="nav-link" data-page="projects">
+                    ▦ Projects
+                </button>
+                <button class="nav-link" data-page="skills">
+                    ✳ Skills
+                </button>
+                <button class="nav-link" data-page="messages">
+                    ✉ Messages
+                </button>
+            </nav>
+
+            <button id="logoutButton" class="logout-button">
+                ↪ Sign Out
+            </button>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <button id="menuButton" class="menu-button"
+                        type="button">☰</button>
+
+                <div>
+                    <p class="eyebrow">YOUR DIGITAL SPACE</p>
+                    <h2 id="pageTitle">Overview</h2>
+                </div>
+
+                <div class="admin-badge">
+                    <span class="admin-dot"></span>
+                    ADMIN
+                </div>
+            </header>
+
+            <!-- OVERVIEW -->
+            <section class="page" id="page-overview">
+                <p class="eyebrow">DASHBOARD / OVERVIEW</p>
+                <h1>Welcome back, <span>Namani.</span></h1>
+                <p class="muted">
+                    Manage your portfolio from one place.
+                </p>
+
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <p>Total Blogs</p>
+                        <h2 id="blogCount">0</h2>
+                    </article>
+
+                    <article class="stat-card">
+                        <p>Total Projects</p>
+                        <h2 id="projectCount">0</h2>
+                    </article>
+
+                    <article class="stat-card">
+                        <p>Total Skills</p>
+                        <h2 id="skillCount">0</h2>
+                    </article>
+                </div>
+
+                <article class="panel">
+                    <p class="eyebrow">QUICK ACTION</p>
+                    <h2>Share something new.</h2>
+                    <p class="muted">
+                        Create a blog and publish it to your portfolio.
+                    </p>
+                    <button class="gold-button" data-open-page="blogs">
+                        + Create New Blog
+                    </button>
+                </article>
+            </section>
+
+            <!-- BLOGS -->
+            <section class="page hidden" id="page-blogs">
+                <p class="eyebrow">PORTFOLIO CONTENT</p>
+                <h1>Manage <span>Blogs</span></h1>
+                <p class="muted">
+                    Write, save and publish your articles.
+                </p>
+
+                <article class="panel">
+                    <h2 id="blogFormTitle">Create a Blog</h2>
+
+                    <form id="blogForm">
+                        <input type="hidden" id="blogId">
+
+                        <label for="blogTitle">Blog Title</label>
+                        <input type="text" id="blogTitle" required
+                               maxlength="150"
+                               placeholder="Enter blog title">
+
+                        <label for="blogImage">Cover Image URL</label>
+                        <input type="url" id="blogImage"
+                               placeholder="https://...">
+
+                        <label for="blogDescription">Short Description</label>
+                        <textarea id="blogDescription" rows="3"
+                                  required
+                                  placeholder="Write a short introduction"></textarea>
+
+                        <label for="blogContent">Full Blog Content</label>
+                        <textarea id="blogContent" rows="8" required
+                                  placeholder="Write your complete blog here"></textarea>
+
+                        <div class="form-actions">
+                            <button type="submit" class="gold-button">
+                                Save Blog
+                            </button>
+
+                            <button type="button" id="cancelBlogEdit"
+                                    class="secondary-button hidden">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </article>
+
+                <article class="panel">
+                    <h2>Your Blogs</h2>
+                    <div id="blogsList" class="content-list">
+                        <p class="muted">Your blogs will appear here.</p>
+                    </div>
+                </article>
+            </section>
+
+
+<!-- PROJECTS -->
+<section class="page hidden" id="page-projects">
+    <p class="eyebrow">YOUR WORK</p>
+    <h1>Manage <span>Projects</span></h1>
+
+    <article class="panel">
+        <h2 id="projectFormTitle">Add a Project</h2>
+
+        <form id="projectForm" class="admin-form">
+            <input type="hidden" id="projectId">
+
+            <label for="projectTitle">Project Title</label>
+            <input
+                type="text"
+                id="projectTitle"
+                placeholder="e.g. My Portfolio"
+                required
+            >
+
+            <label for="projectDescription">Description</label>
+            <textarea
+                id="projectDescription"
+                rows="3"
+                placeholder="Describe your project"
+                required
+            ></textarea>
+
+            <label for="projectImage">Image URL</label>
+            <input
+                type="url"
+                id="projectImage"
+                placeholder="https://..."
+            >
+
+            <label for="projectUrl">Project Link</label>
+            <input
+                type="url"
+                id="projectUrl"
+                placeholder="https://..."
+            >
+
+            <button type="submit" class="gold-button">
+                Save Project
+            </button>
+
+            <button
+                type="button"
+                id="cancelProjectEdit"
+                class="secondary-button hidden"
+            >
+                Cancel
+            </button>
+        </form>
+    </article>
+
+    <article class="panel">
+        <h2>Your Projects</h2>
+        <p class="muted">
+            Projects saved here will be available to your portfolio.
+        </p>
+        <div id="projectsList" class="content-list"></div>
+    </article>
+</section>
+
+
+<!-- SKILLS -->
+<section class="page hidden" id="page-skills">
+    <p class="eyebrow">YOUR TOOLKIT</p>
+    <h1>Manage <span>Skills</span></h1>
+
+    <article class="panel">
+        <p class="muted">
+            Your skills are loaded from Supabase.
+        </p>
+
+        <form id="skillForm" class="admin-form">
+            <label for="skillName">Skill Name</label>
+            <input
+                type="text"
+                id="skillName"
+                name="name"
+                placeholder="e.g. HTML"
+                required
+            >
+
+            <label for="skillLevel">Skill Level</label>
+            <input
+                type="text"
+                id="skillLevel"
+                name="level"
+                placeholder="e.g. Intermediate"
+            >
+
+            <button type="submit">Add Skill</button>
+        </form>
+
+        <div id="skillsList" class="content-list"></div>
+    </article>
+</section>
+
+
+
+          
+            <section class="page hidden" id="page-messages">
+                <p class="eyebrow">YOUR INBOX</p>
+                <h1>Visitor <span>Messages</span></h1>
+                <article class="panel">
+                    
+                    <div id="messagesList" class="content-list"></div>
+                </article>
+            </section>
+
+            <footer class="footer">
+                <span>© <span id="year"></span> Namani</span>
+                <span>Luxury Black & Gold ✦</span>
+            </footer>
+
+            <p id="statusMessage" class="message"></p>
+        </main>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>

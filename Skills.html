@@ -8,10 +8,27 @@
 </head>
 <body>
      <div class="skil" id="skilli">
+     <div class="menu-overlay" id="menuOverlay"></div>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="menubar" id="mainMenu">
+        <a href="index.html" id="h">Home</a>
+        <a href="about.html" id="a">About</a>
+        <a href="Service.html" id="h">Services</a>
+        <a href="Skills.html" id="a">Skills</a>
+        <a href="project.html" id="h">Project</a>
+        <a href="blog.html" id="a">Blog</a>
+        <a href="contact.html" id="h">Contact me</a>
+    </nav>   
     <div class="Skills">
         <div class="back">
- <a href="index.html"><img src="./backarrow.png" alt=""></a>       
-<h4 id="homee">Home</h4>
+       
+<h4 id="hoome">MY SKILLS = MY CARRER</h4>
 </div>
 <div class="rowit">
 <div class="skdiv"> 
@@ -22,6 +39,7 @@
  <img id="fosk" src="./assets/github.svg" alt="">
  <img id="fisk" src="./assets/git.svg" alt="">
  <img id="sisk" src="./assets/Figma.svg" alt="">
+ <div id="portfolioSkills"></div>
  <img id="seemore" src="./seemore.png" alt="">
  
 </div>
@@ -43,12 +61,15 @@
 <p id="pro">Project Hosting</p>
 <p id="ver">Version Control</p>
 <p id="ui">UI/UX Design</p>
-<p id="clic">Click to see more</p>
+
+<p id="clic"><a href="https://www.youtube.com/@Namanworshiper">Click to see more</a></p>
 </div>
 </div>
     </div>
     </div>
 
-   <script src="port.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="port.js"></script>
 </body>
 </html>
