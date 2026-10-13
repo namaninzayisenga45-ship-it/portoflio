@@ -1,8 +1,5 @@
 
-/* =========================
-   NAMANI ADMIN DASHBOARD
-   Luxury Black & Gold
-========================= */
+
 
 :root {
     --bg: #0b0b0d;
@@ -82,7 +79,10 @@ textarea:focus-visible {
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
-
+#logoutButton{
+    background-color:rgb(0, 255, 255) ;
+    border-radius:30px;
+}
 .login-logo {
     width: 64px;
     height: 64px;
@@ -316,9 +316,6 @@ textarea::placeholder {
     width: 100%;
 }
 
-/* =========================
-   MAIN CONTENT
-========================= */
 
 .main-content {
     width: calc(100% - 255px);
@@ -385,7 +382,11 @@ textarea::placeholder {
     width: 100%;
     animation: pageAppear 0.25s ease;
 }
-
+.gold-button{
+    background-color: rgb(0, 255, 255) ;;
+    border-radius: 30px;
+    
+}
 @keyframes pageAppear {
     from {
         opacity: 0;
@@ -733,4 +734,10 @@ textarea::placeholder {
     .quick-actions .btn {
         width: 100%;
     }
+}
+
+#blogContent{
+   
+    height: 20px;
+    width:200px;
 }
