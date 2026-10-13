@@ -197,10 +197,6 @@ if (window.supabase) {
     }
 
 async function loadPortfolioSkills() {
-    const container = document.getElementById("portfolioSkills");
-
-    if (!container) return;
-
     const { data, error } = await projectDatabase
         .from("skills")
         .select("name, level")
@@ -211,16 +207,28 @@ async function loadPortfolioSkills() {
         return;
     }
 
+    const skillsContainer = document.getElementById("dynamicSkills");
+    const levelsContainer = document.getElementById("dynamicLevels");
+
+    if (!skillsContainer || !levelsContainer) return;
+
+    skillsContainer.replaceChildren();
+    levelsContainer.replaceChildren();
+
     data.forEach((skill) => {
-        const item = document.createElement("p");
+        const name = document.createElement("p");
+        name.textContent = skill.name;
+        skillsContainer.appendChild(name);
 
-        item.textContent = skill.level
-            ? `${skill.name} — ${skill.level}`
-            : skill.name;
-
-        container.appendChild(item);
+        if (skill.level) {
+            const level = document.createElement("p");
+            level.textContent = skill.level;
+            levelsContainer.appendChild(level);
+        }
     });
 }
+
+
 
     loadPortfolioProjects();
     loadPortfolioSkills();
