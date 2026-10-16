@@ -272,3 +272,38 @@ async function loadPortfolioSkills() {
     }
 
 }
+
+
+
+function goToBlog() {
+    const button = document.getElementById("seeMoreBtn");
+
+    button.textContent = "Loading...";
+    button.disabled = true;
+
+    setTimeout(() => {
+        window.location.href = "blog.html";
+    }, 1000);
+}
+
+document.querySelectorAll('a[href$=".jpeg"] button#read').forEach(button => {
+    button.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const link = this.parentElement.href;
+
+        this.textContent = "Loading...";
+        this.disabled = true;
+
+        setTimeout(() => {
+            window.location.href = link;
+        }, 700);
+    });
+});
+
+window.addEventListener("pageshow", function () {
+    document.querySelectorAll('a[href$=".jpeg"] button#read').forEach(button => {
+        button.textContent = "Read More";
+        button.disabled = false;
+    });
+});

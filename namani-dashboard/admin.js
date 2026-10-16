@@ -738,6 +738,7 @@ async function loadSkills() {
     });
 }
 
+
 async function loadMessages() {
     const list = document.getElementById("messagesList");
 
@@ -766,17 +767,21 @@ async function loadMessages() {
         heading.textContent =
             `${message.name || "Visitor"} — ${message.email || ""}`;
 
+        const time = document.createElement("p");
+        time.textContent = message.created_at
+            ? "Received: " + new Date(message.created_at).toLocaleString()
+            : "Time unavailable";
+
         const content = document.createElement("p");
         content.textContent = message.content || "";
 
-        item.append(heading, content);
+        item.append(heading, time, content);
         list.append(item);
     });
 }
 
-/* =================================
-   11. START THE DASHBOARD
-================================= */
+
+
 
 openPage("overview");
 checkSession();

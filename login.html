@@ -216,6 +216,27 @@ const ADMIN_USER_ID = "a0dca848-6e1e-4aae-8a02-20285c697ba8";
 const loginForm = document.getElementById("loginForm");
 const loginButton = document.getElementById("logBut");
 
+document.getElementById("forgotPassword").addEventListener("click", async (event) => {
+    event.preventDefault();
+
+    const email = document.getElementById("loginEmail").value.trim();
+
+    if (!email) {
+        alert("Banza wandike email yawe.");
+        return;
+    }
+
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: window.location.origin + "/reset-password.html"
+    });
+
+    if (error) {
+        alert(error.message);
+    } else {
+        alert("Reba email yawe kugira ngo uhindure password.");
+    }
+});
+
 loginForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
@@ -249,6 +270,6 @@ window.location.href = "./namani-dashboard/admin.html";
     }
 });
 </script>
-
+<footer>© 2026 Namani. All Rights Reserved.</footer>
 </body>
 </html>
