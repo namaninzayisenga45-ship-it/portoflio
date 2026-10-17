@@ -307,3 +307,21 @@ window.addEventListener("pageshow", function () {
         button.disabled = false;
     });
 });
+document.querySelectorAll(".see-more-classroom").forEach(function (button) {
+    const originalText = button.textContent;
+
+    window.addEventListener("pageshow", function () {
+        button.textContent = originalText;
+        button.disabled = false;
+    });
+
+    button.addEventListener("click", function () {
+        button.textContent = "Loading...";
+        button.disabled = true;
+
+        setTimeout(function () {
+            window.location.href =
+                "https://classroom.google.com/c/ODU5ODMyNzIzMjc5";
+        }, 1500);
+    });
+});
